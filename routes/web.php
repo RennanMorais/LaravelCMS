@@ -37,4 +37,5 @@ Route::prefix('painel')->group(function(){
     Route::put('settingssave', [Admin\SettingController::class, 'save'])->name('settings.save');
 
     Route::resource('pages', Admin\PageController::class);
+    Route::put('pagessave', [Admin\PageController::class, 'save'])->name('pages.save');
 });
