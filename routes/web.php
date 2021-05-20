@@ -39,3 +39,5 @@ Route::prefix('painel')->group(function(){
     Route::resource('pages', Admin\PageController::class);
     Route::put('pagessave', [Admin\PageController::class, 'save'])->name('pages.save');
 });
+
+Route::fallback([Site\PageController::class, 'index']);
